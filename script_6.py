@@ -1,4 +1,5 @@
-# YouTube Shorts Limiter Browser Extension
+# Create a comprehensive README file
+readme_content = """# YouTube Shorts Limiter Browser Extension
 
 A productivity-focused browser extension that helps you limit your YouTube Shorts consumption by tracking your daily viewing count and taking action when you reach your set limit.
 
@@ -144,3 +145,10 @@ This project is open source. Feel free to use, modify, and distribute.
 - Combine with other productivity tools for best results
 
 Stay focused and productive! 🎯💪
+"""
+
+# Save README.md
+with open('README.md', 'w') as f:
+    f.write(readme_content)
+
+print("Created README.md with comprehensive installation and usage instructions")

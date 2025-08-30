@@ -1,0 +1,39 @@
+# Create the manifest.json file for the YouTube Shorts Productivity Extension
+manifest_json = """{
+  "manifest_version": 3,
+  "name": "YouTube Shorts Limiter",
+  "version": "1.0",
+  "description": "Limit your YouTube Shorts consumption to stay productive",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Shorts Limiter"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}"""
+
+# Save manifest.json
+with open('manifest.json', 'w') as f:
+    f.write(manifest_json)
+
+print("Created manifest.json")
